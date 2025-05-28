@@ -1,0 +1,29 @@
+id: meilisearch-detect
+
+info:
+  name: Meilisearch - Detect
+  author: userdehghani
+  severity: info
+  description: |
+    An open-source, blazingly fast, and hyper-relevant search engine that will improve your search experience.
+  reference:
+    - https://www.meilisearch.com/
+  metadata:
+    verified: true
+    max-request: 1
+    fofa-query: app="meilisearch"
+  tags: meilisearch,detect,tech
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: and
+    matchers:
+      - type: dsl
+        dsl:
+          - 'status_code == 200'
+          - 'contains(body, "Meilisearch is running")'
+        condition: and
+# digest: 4a0a00473045022100db0a663141b6cee3057f940496a06e1c3440b43aec60062b53a4d92c0a656e1202204688ae570ca0697929b4240c80e98ec23d417f505a6326989a202473cd0c8db8:922c64590222798bb761d5b6d8e72950
