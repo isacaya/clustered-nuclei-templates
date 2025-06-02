@@ -1,4 +1,4 @@
-#### Perform the maximum number of checks with minimal noise.
+#### Perform the maximum number of checks with single request.
 All clusterable templates are sorted into directories to help you find and use them more easily. Each directory contains templates that can be executed together with just a single request.
 
 # Usage
